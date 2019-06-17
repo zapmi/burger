@@ -2,11 +2,9 @@
 var connection = require("../config/connection.js");
 
 // Object Relational Mapper (ORM)
-var tableName = "burgers";
-
 var orm = {
     selectAll: function (callback) {
-        var selectA = "SELECT * FROM " + tableName;
+        var selectA = "SELECT * FROM ??";
 
         connection.query(selectA, function (err, result) {
 
@@ -16,7 +14,7 @@ var orm = {
     },
 
     insertOne: function (burger, callback) {
-        var insertO = "INSERT INTO " + tableName + " (burger_name, devoured) VALUES (?,?)";
+        var insertO = "INSERT INTO ?? (burger_name, devoured) VALUES (?,?)";
         // burger.complete = burger.complete || 0;
         connection.query(insertO, [
             burger.burger_name, burger.devoured
@@ -28,7 +26,7 @@ var orm = {
     },
 
     updateOne: function (burger, callback) {
-        var updateO = "UPDATE " + tableName + " SET burger_name=?, devoured=? WHERE id=?";
+        var updateO = "UPDATE ?? SET burger_name=?, devoured=? WHERE id=?";
 
         connection.query(updateO, [
             burger.burger_name, burger.devoured, burger.id
