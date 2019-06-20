@@ -1,4 +1,4 @@
-var orm = require("../config/orm");
+var orm = require("../config/orm.js");
 
 var burger = {
 
@@ -6,17 +6,17 @@ var burger = {
         orm.selectAll("burgers", function (res) {
             cb(res);
         });
-    },
-    insertOne: function (cb) {
-        orm.insertOne("burgers", "burger_name", "devoured", function (res) {
-            cb(res);
-        });
-    },
-    updateOne: function (cb) {
-        orm.updateOne("burgers", "burger_name", "devoured", "id", function (res) {
-            cb(res);
-        });
-    },
+    }
+    // insertOne: function (tableInput, colName, valueObj, cb) {
+    //     orm.insertOne(tableInput, colName, valueObj, function (res) {
+    //         cb(res);
+    //     });
+    // },
+    // updateOne: function (cb) {
+    //     orm.updateOne("burgers", "burger_name", "devoured", "id", function (res) {
+    //         cb(res);
+    //     });
+    // },
 
 
 };
