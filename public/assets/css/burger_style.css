@@ -1,9 +1,10 @@
 @font-face {
     font-family: "burgerQueen";
     src: url("../css/fonts/burgerQueen.ttf") format("woff"), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    url("../css/fonts/burgerQueen.ttf") format('truetype');  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+    url("../css/fonts/burgerQueen.ttf") format('truetype');
+    /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
-body {
+body{
     font-family: "burgerQueen";
 }
